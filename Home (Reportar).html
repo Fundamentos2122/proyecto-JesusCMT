@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon list at https://www.w3schools.com/icons/icons_reference.asp (Scroll down to Google) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="Framework/css/Framework.css">
+    <title>Intermemedio - Home</title>
+</head>
+<body class = "bg-bg">
+    <nav class="navbar bg-info" style="justify-content: space-between; align-items: flex-end;">
+        <!-- Botón de búsqueda (móvil) -->
+        <a href="Explore (LI).html" class="navbar-toggle btn text-secondary border-0 bg-primary" type="button">
+            <i class="material-icons" style="font-size: 2em;">search</i>
+        </a>
+        <!-- Opciones izquierda (escritorio) -->
+        <div class="navbar-collapse" style="padding: 0.2em 0;">
+            <button class="btn text-bg border-0 bg-primary"><i class="material-icons" style="font-size: 2em;">palette</i></button>
+            <a href="Explore (LI).html" class="btn text-secondary border-0 bg-primary display-5">Explorar</a>
+            <a href="Subir meme.html" class="btn text-secondary border-0 bg-primary display-5">Subir meme</a>
+        </div>
+        <!-- Titular -->
+        <a href="Home (LI).html" class="navbar-brand h2">Intermemedio</a>
+        <!-- Botón menú (móvil) -->
+        <div class="navbar-toggle">
+            <button class="navbar-toggle btn text-bg border-0 bg-primary" type="button">
+                <i class="material-icons" style="font-size: 2em;">menu</i>
+            </button>
+            <!-- Menú desplegable -->
+            <ul class="dropdown-menu show" style="right: 0; z-index: 20000;">
+                <li>
+                    <a href="Subir meme.html" class="dropdown-item">Subir meme</a>
+                </li>
+                <li>
+                    <a href="Favoritos (LI).html" class="dropdown-item">Favoritos</a>
+                </li>
+                <li>
+                    <a href="Memes subidos (LI).html" class="dropdown-item">Mis imágenes</a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item">Cambiar colores</a>
+                </li>
+                <li>
+                    <a href="Home (LO).html" class="dropdown-item">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Opciones derecha (escritorio) -->
+        <div class="navbar-collapse">
+            <a href="User page (LI).html" class="btn text-secondary border-0 bg-primary">
+                <i class="material-icons" style="font-size: 4em;">account_circle</i>
+            </a>
+            <button class="btn text-secondary border-0 bg-primary dropdown-toggle">
+                <i class="material-icons" style="font-size: 3em;">keyboard_arrow_up</i>
+            </button>
+            <!-- Menú desplegable -->
+            <ul class="dropdown-menu show" style="right: 0; z-index: 20000;">
+                <li>
+                    <a href="Favoritos (LI).html" class="dropdown-item">Favoritos</a>
+                </li>
+                <li>
+                    <a href="Memes subidos (LI).html" class="dropdown-item">Mis imágenes</a>
+                </li>
+                <li>
+                    <a href="Home (LO).html" class="dropdown-item">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal show" id="modal-test" style="z-index: 30000;">
+        <div class="modal-content bg-success">
+            <div class="modal-header">
+                <h5>Reportar imagen</h5>
+                <button data-dismiss = "#modal-test" class="btn btn-secondary border border-primary" style="color: var(--color-primary);">X</button>
+            </div>
+            <div class="modal-body">
+                Gracias por ayudarnos reportando imágenes inapropiadas. ¿Cuál es el problema con esta imágen?
+            </div>
+            <form action="">
+                <div style="margin: 1em;">
+                    <input type="radio" id="Hate" name="rule_broken" value="Hate">
+                    <label for="Hate">Promueve mensajes de odio o violencia</label><br>
+                    <input type="radio" id="SPAM" name="rule_broken" value="SPAM">
+                    <label for="SPAM">Es SPAM</label><br>
+                    <input type="radio" id="Personal_info" name="rule_broken" value="Personal_info">
+                    <label for="Personal_info">Revela información personal o delicada</label><br>
+                    <input type="radio" id="Explicit" name="rule_broken" value="Explicit">
+                    <label for="Explicit">Es de naturaleza explícita</label>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary border-3 border-primary" style="color: var(--color-primary);" data-dismiss = "#Reportar">Cancelar</button>
+                    <button class="btn btn-primary text-secondary border-3 border-secondary">Reportar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container-fluid container-lg bg-secondary">
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M10.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">1633</div>
+                            <a href="Meme comentarios (LI).html" class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </a>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu show" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M07.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">2286</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M02.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">472</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M05.png" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">112</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M09.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">1005</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M03.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">2056</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M01.png" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">92</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M08.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">131</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M04.png" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">811</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10 border">
+                    <img src="Imagenes/M06.jpg" alt="Meme" class="meme">
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="bg-secondary" style="display: inline-flex; justify-content: space-between; width: 100%;">
+                        <div style="display: inline-block;">
+                            <button class="btn text-danger border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                            </button>
+                            <div style="font-size: 1.9em; display: inline-block;" class="text-danger">376</div>
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">forum</i>
+                            </button>
+                        </div>
+                        <div style="display: inline-block; text-align: right;">
+                            <button class="btn text-dark border-0 bg-secondary" type="button">
+                                <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                            </button>
+                            <!-- Menú desplegable -->
+                            <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">star_border</i> Favoritos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">file_download</i> Descargar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">share</i> Compartir
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="dropdown-item">
+                                        <i class="material-icons">flag</i> Reportar
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+</body>
+</html>

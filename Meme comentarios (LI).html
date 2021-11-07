@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon list at https://www.w3schools.com/icons/icons_reference.asp (Scroll down to Google) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="Framework/css/Framework.css">
+    <title>Intermemedio - Comentarios</title>
+</head>
+<body class = "bg-bg">
+    <nav class="navbar bg-info" style="justify-content: space-between; align-items: flex-end;">
+        <!-- Botón de búsqueda (móvil) -->
+        <a href="Explore (LI).html" class="navbar-toggle btn text-secondary border-0 bg-primary" type="button">
+            <i class="material-icons" style="font-size: 2em;">search</i>
+        </a>
+        <!-- Opciones izquierda (escritorio) -->
+        <div class="navbar-collapse" style="padding: 0.2em 0;">
+            <button class="btn text-bg border-0 bg-primary"><i class="material-icons" style="font-size: 2em;">palette</i></button>
+            <a href="Explore (LI).html" class="btn text-secondary border-0 bg-primary display-5">Explorar</a>
+            <a href="Subir meme.html" class="btn text-secondary border-0 bg-primary display-5">Subir meme</a>
+        </div>
+        <!-- Titular -->
+        <a href="Home (LI).html" class="navbar-brand h2">Intermemedio</a>
+        <!-- Botón menú (móvil) -->
+        <div class="navbar-toggle">
+            <button class="navbar-toggle btn text-bg border-0 bg-primary" type="button">
+                <i class="material-icons" style="font-size: 2em;">menu</i>
+            </button>
+            <!-- Menú desplegable -->
+            <ul class="dropdown-menu show" style="right: 0; z-index: 20000;">
+                <li>
+                    <a href="Subir meme.html" class="dropdown-item">Subir meme</a>
+                </li>
+                <li>
+                    <a href="Favoritos (LI).html" class="dropdown-item">Favoritos</a>
+                </li>
+                <li>
+                    <a href="Memes subidos (LI).html" class="dropdown-item">Mis imágenes</a>
+                </li>
+                <li>
+                    <a href="" class="dropdown-item">Cambiar colores</a>
+                </li>
+                <li>
+                    <a href="Home (LO).html" class="dropdown-item">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Opciones derecha (escritorio) -->
+        <div class="navbar-collapse">
+            <a href="User page (LI).html" class="btn text-secondary border-0 bg-primary">
+                <i class="material-icons" style="font-size: 4em;">account_circle</i>
+            </a>
+            <button class="btn text-secondary border-0 bg-primary dropdown-toggle">
+                <i class="material-icons" style="font-size: 3em;">keyboard_arrow_up</i>
+            </button>
+            <!-- Menú desplegable -->
+            <ul class="dropdown-menu show" style="right: 0; z-index: 20000;">
+                <li>
+                    <a href="Favoritos (LI).html" class="dropdown-item">Favoritos</a>
+                </li>
+                <li>
+                    <a href="Memes subidos (LI).html" class="dropdown-item">Mis imágenes</a>
+                </li>
+                <li>
+                    <a href="Home (LO).html" class="dropdown-item">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid container-lg bg-secondary">
+        <div class="container-fluid container-lg bg-bg">
+            <div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10 border">
+                        <img src="Imagenes/M10.jpg" alt="Meme" class="meme">
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div style="display: inline-flex; justify-content: space-between; width: 100%;">
+                            <div style="display: inline-block;">
+                                <button class="btn text-danger border-0 bg-bg" type="button">
+                                    <i class="material-icons" style="font-size: 2em;">favorite_border</i>
+                                </button>
+                                <div style="font-size: 1.9em; display: inline-block;" class="text-danger">1633</div>
+                            </div>
+                            <div style="display: inline-block; text-align: right;">
+                                <button class="btn text-dark border-0 bg-bg" type="button">
+                                    <i class="material-icons" style="font-size: 2em;">more_horiz</i>
+                                </button>
+                                <!-- Menú desplegable -->
+                                <ul class="dropdown-menu" style="right: 0; text-align: left; z-index: 9000;">
+                                    <li>
+                                        <a href="" class="dropdown-item">
+                                            <i class="material-icons">star_border</i> Favoritos
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="dropdown-item">
+                                            <i class="material-icons">file_download</i> Descargar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="dropdown-item">
+                                            <i class="material-icons">share</i> Compartir
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="Home (Reportar).html" class="dropdown-item">
+                                            <i class="material-icons">flag</i> Reportar
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row" style="align-items:center">
+                <div class="col-1"></div>
+                <!-- <form action="" name="Comentar" style="width: 100%;"> -->
+                <div class="col-7" style="display: inline-block;">
+                    <textarea name="Comenta"></textarea>
+                </div>
+                <div class="col-3" style="display: inline-block;">
+                    <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-toggle" style="border-radius: 0.8em; width: 100%; min-width:min-content;">
+                        Comentar
+                    </button>
+                    <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-collapse" style="border-radius: 0.8em; width: 100%;">
+                        <i class="material-icons" style="font-size: 1em;">done</i>
+                    </button>
+                </div>
+                    <!-- </form> -->
+            </div>
+            <br>
+            <div>
+                <!-- Comentario -->
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1" style="padding: 0.35em;">
+                        <img src="Imagenes/PP.png" alt="Profile Picture" class="profilePic">
+                    </div>
+                    <div class="col-9">
+                        <div class="row display-6">
+                            User_1234
+                        </div>
+                        <div class="row border bg-secondary text-dark" style="border-radius: 10px; width: fit-content; max-width: 100%; padding: 0.25em;">
+                            Lorem ipsum
+                        </div>
+                        <div class="row">
+                            <button class="btn text-danger border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">favorite_border</i>
+                                <div style="font-size: 1em; display: inline-block;" class="text-danger">28</div>
+                            </button>
+                            <button class="btn text-dark border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">close</i>
+                            </button>
+                        </div>
+                        <div class="row responder showF">
+                            <div class="col-8" style="display: inline-block;">
+                                <textarea name="Responde"></textarea>
+                            </div>
+                            <div class="col-3" style="display: inline-block;">
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-toggle" style="border-radius: 0.8em; width: 100%; min-width:min-content;">
+                                    Comentar
+                                </button>
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-collapse" style="border-radius: 0.8em; width: 100%;">
+                                    <i class="material-icons" style="font-size: 1em;">done</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Comentario -->
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1" style="padding: 0.35em;">
+                        <img src="Imagenes/PP.png" alt="Profile Picture" class="profilePic">
+                    </div>
+                    <div class="col-9">
+                        <div class="row display-6">
+                            User_2468
+                        </div>
+                        <div class="row border bg-secondary text-dark" style="border-radius: 10px; width: fit-content; max-width: 100%; padding: 0.25em;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum velit eveniet, corporis, aliquid reprehenderit maxime molestiae reiciendis hic, omnis delectus veritatis eligendi incidunt sed accusantium ea earum unde! Perspiciatis, cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quae. Voluptatum impedit esse, facilis deserunt magni repellendus ipsum laborum quaerat sapiente dolorem tempora enim reprehenderit dolor dicta eveniet tempore eligendi!
+                        </div>
+                        <div class="row">
+                            <button class="btn text-danger border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">favorite_border</i>
+                                <div style="font-size: 1em; display: inline-block;" class="text-danger">13</div>
+                            </button>
+                            <button class="btn text-dark border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">reply</i>
+                            </button>
+                        </div>
+                        <div class="row responder">
+                            <div class="col-8" style="display: inline-block;">
+                                <textarea name="Responde"></textarea>
+                            </div>
+                            <div class="col-3" style="display: inline-block;">
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-toggle" style="border-radius: 0.8em; width: 100%; min-width:min-content;">
+                                    Comentar
+                                </button>
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-collapse" style="border-radius: 0.8em; width: 100%;">
+                                    <i class="material-icons" style="font-size: 1em;">done</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Comentario Respuesta -->
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-1" style="padding: 0.35em;">
+                        <img src="Imagenes/PP.png" alt="Profile Picture" class="profilePic">
+                    </div>
+                    <div class="col-8">
+                        <div class="row display-6">
+                            User_9999
+                        </div>
+                        <div class="row border bg-secondary text-dark" style="border-radius: 10px; width: fit-content; max-width: 100%; padding: 0.25em;">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ullam recusandae id, et nulla expedita nesciunt culpa impedit natus sint eveniet exercitationem ipsum perspiciatis incidunt repudiandae fuga, optio non explicabo!
+                        </div>
+                        <div class="row">
+                            <button class="btn text-danger border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">favorite_border</i>
+                                <div style="font-size: 1em; display: inline-block;" class="text-danger">5</div>
+                            </button>
+                            <button class="btn text-dark border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">reply</i>
+                            </button>
+                        </div>
+                        <div class="row responder">
+                            <div class="col-8" style="display: inline-block;">
+                                <textarea name="Responde"></textarea>
+                            </div>
+                            <div class="col-3" style="display: inline-block;">
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-toggle" style="border-radius: 0.8em; width: 100%; min-width:min-content;">
+                                    Comentar
+                                </button>
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-collapse" style="border-radius: 0.8em; width: 100%;">
+                                    <i class="material-icons" style="font-size: 1em;">done</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Comentario Respuesta -->
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-1" style="padding: 0.35em;">
+                        <a href="User page (LI).html">
+                            <img src="Imagenes/PP.png" alt="Profile Picture" class="profilePic">
+                        </a>
+                    </div>
+                    <div class="col-8">
+                        <div class="row display-6">
+                            <a href="User page (LI).html" style="text-decoration: none; color: var(--color-dark);">
+                                User_0123 (tú)
+                            </a>
+                        </div>
+                        <div class="row border bg-secondary text-dark" style="border-radius: 10px; width: fit-content; max-width: 100%; padding: 0.25em;">
+                            @User_9999 Lorem ipsum dolor sit amet
+                        </div>
+                        <div class="row">
+                            <button class="btn text-danger border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">favorite_border</i>
+                                <div style="font-size: 1em; display: inline-block;" class="text-danger">3</div>
+                            </button>
+                            <button class="btn text-dark border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">reply</i>
+                            </button>
+                        </div>
+                        <div class="row responder">
+                            <div class="col-8" style="display: inline-block;">
+                                <textarea name="Responde"></textarea>
+                            </div>
+                            <div class="col-3" style="display: inline-block;">
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-toggle" style="border-radius: 0.8em; width: 100%; min-width:min-content;">
+                                    Comentar
+                                </button>
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-collapse" style="border-radius: 0.8em; width: 100%;">
+                                    <i class="material-icons" style="font-size: 1em;">done</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Comentario -->
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-1" style="padding: 0.35em;">
+                        <img src="Imagenes/PP.png" alt="Profile Picture" class="profilePic">
+                    </div>
+                    <div class="col-9">
+                        <div class="row display-6">
+                            User_7777
+                        </div>
+                        <div class="row border bg-secondary text-dark" style="border-radius: 10px; width: fit-content; max-width: 100%; padding: 0.25em;">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas aut vitae placeat sequi incidunt fugiat dolorem quibusdam a? Earum adipisci quibusdam iste rem quasi voluptas dolores impedit harum quisquam eligendi?
+                        </div>
+                        <div class="row">
+                            <button class="btn text-danger border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">favorite_border</i>
+                                <div style="font-size: 1em; display: inline-block;" class="text-danger">8</div>
+                            </button>
+                            <button class="btn text-dark border-0 bg-bg" type="button">
+                                <i class="material-icons" style="font-size: 1em;">reply</i>
+                            </button>
+                        </div>
+                        <div class="row responder">
+                            <div class="col-8" style="display: inline-block;">
+                                <textarea name="Responde"></textarea>
+                            </div>
+                            <div class="col-3" style="display: inline-block;">
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-toggle" style="border-radius: 0.8em; width: 100%; min-width:min-content;">
+                                    Comentar
+                                </button>
+                                <button class="btn border-3 border-secondary bg-primary text-secondary display-5 commentButton-collapse" style="border-radius: 0.8em; width: 100%;">
+                                    <i class="material-icons" style="font-size: 1em;">done</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
